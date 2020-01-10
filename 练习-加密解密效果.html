@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <button id="btn1">加密</button>
+    <p id="p1"></p>
+    <button id="btn2">解密</button>
+    <p id="p2"></p>
+    <script>
+        var oTe = document.getElementsByTagName("input")[0];
+        var oBtn1 = document.getElementById("btn1");
+        var oBtn2 = document.getElementById("btn2");
+        var oP1 = document.getElementById("p1");
+        var oP2 = document.getElementById("p2");
+        oBtn1.onclick = function(){
+            var str = oTe.value;
+            for(var i=0;i<str.length;i++){
+                oP1.innerHTML += String.fromCharCode(str.charCodeAt(i)+50);
+            }
+        }
+        oBtn2.onclick = function(){
+            var str = oP1.innerHTML;
+            for(var i=0;i<str.length;i++){
+                oP2.innerHTML += String.fromCharCode(str.charCodeAt(i)-50);
+            }
+        }
+
+    </script>
+</body>
+</html>

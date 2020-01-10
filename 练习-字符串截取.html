@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>可贷款放款给快递反馈更多咖啡馆可贷款放款给快递反馈更多咖啡馆可贷款放款给快递反馈更多咖啡馆可贷款放款给快递反馈更多咖啡馆可贷款放款给快递反馈更多咖啡馆可贷款放款给快递反馈更多咖啡馆可贷款放款给快递反馈更多咖啡馆</p>
+    <button>收起</button>
+    <script>
+    var oP = document.getElementsByTagName("p")[0];
+    var oBtn = document.getElementsByTagName("button")[0];
+    oP.inner = oP.innerHTML;
+    oBtn.bOn = true;
+    oBtn.onclick = function (){
+        // if(oBtn.bOn){
+        //     oP.innerHTML = oP.inner.substring(0,20) + "......";
+        //     oBtn.innerHTML = "展开";
+        // }else{
+        //     oP.innerHTML = oP.inner;
+        //     oBtn.innerHTML = "收起";
+        // }
+        oP.innerHTML = oBtn.bOn ? oP.inner.substring(0,20) + "......" : oP.inner;
+        oBtn.innerHTML = oBtn.bOn ? "展开" : "收起";
+        oBtn.bOn = !oBtn.bOn;
+    }
+    </script>
+</body>
+</html>

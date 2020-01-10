@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+       //随机彩票 
+       //生成一注随机彩票 ，从1-35里随机选7个不同的数字 
+      
+       var arr1=[];
+       for(var i=1;i<36;i++){
+           arr1.push(i);
+       }
+       console.log(arr1);
+       var arr = [];
+       for(var i=0;i<7;i++){
+           var a = Math.floor(Math.random()*(arr1.length-1));
+        arr.push(arr1.splice(a,1)[0]);
+       }
+       console.log(arr);
+
+
+       //方法二
+    //    var arr =[];
+    //    for(var i=0;i<7;i++){
+    //        var iRandom =Math.floor(Math.random()*(35-1)+1);
+    //        if(arr.indexOf(iRandom)==-1){
+    //            arr.push(iRandom);
+    //        }else{
+    //            i--;
+    //        }
+    //        console.log(arr);
+
+    //方法三 
+    var arr=[];
+       for(var i=1;i<36;i++){
+           arr.push(i);
+       }
+      
+       arr.sort(function(a,b){//随机排序
+           return Math.random()-0.5;
+       })
+       arr.length=7;//选择7个
+       console.log(arr);
+
+
+       
+   </script>
+</body>
+</html> 

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <button>生成</button>
+    <p></p>
+    <script>
+        var  arr =  ["red","orange","yellow","green","blue","pink"];
+        var oTe = document.getElementsByTagName("input")[0];
+        var  oBtn = document.getElementsByTagName("button")[0];
+        var oP = document.getElementsByTagName("p")[0];
+        var str = oTe.value;
+        
+        oBtn.onclick = function(){
+             oP.innerHTML=  "<span>"+oTe.value.split("").join("</span><span>")+"</span>";
+             var aSp = document.getElementsByTagName("span");
+             for(var i=0;i<aSp.length;i++){
+                 aSp[i].style.color = arr[i%aSp.length];
+             }
+        }
+
+    </script>
+</body>
+</html>

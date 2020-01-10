@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr =["345px","23px","10px","100px"];
+        // var arr1=[];
+        // for(var i=0;i<arr.length;i++){
+        //          arr1.push(parseInt(arr[i]));
+        // }
+        // arr1.sort(function(a,b){
+        //     return a-b;
+        // }).reverse();
+        // var arr2=[];
+        // for(var i=0;i<arr1.length;i++){
+        //      arr2.push(arr1[i]+"px");
+        // }
+        // console.log(arr2);
+              //方法二
+            arr.sort(function(a,b){
+                 return parseInt(a)-parseInt(b);
+            }).reverse();
+            console.log(arr);
+
+    </script>
+</body>
+</html>

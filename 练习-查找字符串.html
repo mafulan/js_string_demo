@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str = "同学们在新学期里有新学期的样子，并开始了新学期的学习";
+        var s = "新学期";
+        var arr = [];
+        var i =0;
+        while(str.indexOf(s,i)>0){
+            arr.push(str.indexOf(s,i));
+            i = str.indexOf(s,i)+s.length;
+       }
+        console.log(arr);
+    </script>
+
+</body>
+</html>
